@@ -19,7 +19,7 @@ while index < len(secret):
     else:
         guess_elsewhere: bool = False
         other_index: int = 0
-        while bool == False and other_index < len(secret):
+        while guess_elsewhere == False and other_index < len(secret):
             if secret[other_index] == guess[index]:
                 guess_elsewhere = True
             else:
