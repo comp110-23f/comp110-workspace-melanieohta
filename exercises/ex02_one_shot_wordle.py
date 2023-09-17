@@ -22,12 +22,10 @@ while index < len(secret):
         while guess_elsewhere == False and other_index < len(secret):
             if secret[other_index] == guess[index]:
                 guess_elsewhere = True
+                emoji += YELLOW_BOX
             else:
-                other_index += other_index
-        if guess_elsewhere == True:
-            emoji += YELLOW_BOX
-        else:
-            emoji += WHITE_BOX
+                emoji += WHITE_BOX
+                other_index += 1
     
     index += 1
     
