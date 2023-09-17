@@ -19,12 +19,12 @@ while index < len(secret):
     else:
         guess_elsewhere: bool = False
         other_index: int = 0
-        while guess_elsewhere == False and other_index < len(secret):
+        while not guess_elsewhere and other_index < len(secret):
             if secret[other_index] == guess[index]:
                 guess_elsewhere = True
             other_index += 1
-        if guess_elsewhere == False:
-                emoji += WHITE_BOX
+        if not guess_elsewhere:
+            emoji += WHITE_BOX
         else:
             emoji += YELLOW_BOX
     index += 1
