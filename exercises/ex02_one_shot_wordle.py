@@ -25,7 +25,7 @@ while index < len(secret):
                 emoji += YELLOW_BOX
             else:
                 emoji += WHITE_BOX
-                other_index += 1
+            other_index += 1
     
     index += 1
     
