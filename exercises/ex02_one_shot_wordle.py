@@ -30,7 +30,8 @@ while index < len(secret):
             emoji += WHITE_BOX
     
     index += 1
-    print(emoji)
+    
+print(emoji)
     
 if secret != guess:
     print("Not quite. Play again soon!")
