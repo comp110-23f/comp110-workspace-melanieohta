@@ -11,7 +11,7 @@ index: int = 0
 emoji: str = ""
 
 while len(guess) != 6:
-    print(input("That was not 6 letters! Try again: "))
+    guess = input("That was not 6 letters! Try again: ")
 
 while index < len(secret):
     if guess[index] == secret[index]:
