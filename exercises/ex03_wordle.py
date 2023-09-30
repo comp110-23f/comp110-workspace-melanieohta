@@ -49,7 +49,7 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     turn: int = 1
     game_won: bool = False
-    secret: str = "max"
+    secret: str = "codes"
     # continues until player reaches 6 turns or they win the game
     while turn <= 6 and game_won is False:
         print(f"=== Turn { turn }/6 ===")
