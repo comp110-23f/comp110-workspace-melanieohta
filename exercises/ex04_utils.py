@@ -37,8 +37,5 @@ def is_equal(list1: list[int], list2: list[int]) -> bool:
     while i < len(list1):
         if list1[i] != list2[i]:
             return False
+        i += 1
     return True
-
-print(all([1, 2, 3], 1))
-print(max([1, 3, 2]))
-print(is_equal([1, 0, 1], [1, 0, 1]))
