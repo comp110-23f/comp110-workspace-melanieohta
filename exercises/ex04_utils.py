@@ -5,6 +5,8 @@ __author__ = "730671130"
 
 def all(num_list: list[int], num: int) -> bool:
     """Returns True if all numbers in a num_list are num."""
+    if len(num_list) == 0:
+        return False
     i: int = 0
     count: int = 0
     while i < len(num_list):
