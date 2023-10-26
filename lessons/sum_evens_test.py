@@ -19,4 +19,4 @@ def test_sum_positives() -> None:
 def test_sum_neg_and_positives() -> None:
     """sum_evens_of_list of a list with negatives and positives"""
     test_list: list[int] = [-1,-2,3,4]
-    assert sum_evens_of_list(test_list) == 4
+    assert sum_evens_of_list(test_list) == 2
