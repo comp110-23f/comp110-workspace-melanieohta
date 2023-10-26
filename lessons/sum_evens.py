@@ -1,7 +1,8 @@
 """Practice summing over lists."""
 
+
 def sum_evens_of_list(input_list: list[int]) -> int:
-    """Loop over a list and sum all even elements"""
+    """Loop over a list and sum all even elements."""
     sum_total: int = 0
     idx: int = 0
     while idx < len(input_list):

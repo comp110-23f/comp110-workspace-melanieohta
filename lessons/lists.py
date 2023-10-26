@@ -8,4 +8,3 @@ grocery_list[1] = "cereal"
 grocery_list.pop(2)
 
 print(grocery_list)
-

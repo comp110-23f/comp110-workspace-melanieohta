@@ -9,16 +9,16 @@ max_tries: int = 3
 
 while guess != secret and number_of_tries < max_tries:
     print("Wrong")
-    #If guess is out of bounds, let them know
+    # If guess is out of bounds, let them know
     if guess < 1 or guess > 10:
         print("That's not between 1 and 10!")
-    #If guess is too low, tell them
+    # If guess is too low, tell them
     if guess < secret:
         print("Too low!")
-    #If guess is too high, tell them
+    # If guess is too high, tell them
     elif guess > secret:
         print("Too high!")
-    #Ask for a different guess
+    # Ask for a different guess
     guess = int(input("Guess again: "))
     number_of_tries += 1
 

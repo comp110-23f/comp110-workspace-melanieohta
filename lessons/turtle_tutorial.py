@@ -1,3 +1,5 @@
+"""Turtle tutorial with turtles leo and bob."""
+
 from turtle import Turtle, colormode, done
 colormode(255)
 
@@ -37,10 +39,10 @@ bob.pendown()
 
 side_length: int = 300
  
-i: int = 0
-while (i < 5):
+idx: int = 0
+while (idx < 5):
     bob.forward(side_length)
     bob.left(122)
-    i += 1
+    idx += 1
 
 done()
