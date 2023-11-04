@@ -8,7 +8,7 @@ def invert(inp_dict: dict[str, str]) -> dict[str, str]:
     new_dict: dict[str, str] = {}
     for key in inp_dict:
         for new_key in new_dict:
-            if key == new_key:
+            if inp_dict[key] == new_key:
                 raise KeyError("There is a duplicate key.")
         new_dict[inp_dict[key]] = key
     return new_dict
@@ -60,7 +60,8 @@ def alphabetizer(inp_list: list[str]) -> dict[str, list[str]]:
 def update_attendance(inp_dict: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """This function updates an attendance dictionary with new info about a day a student attended."""
     if day in inp_dict:
-        inp_dict[day].append(student)
+        if student not in inp_dict[day]:
+            inp_dict[day].append(student)
     else:
         inp_dict[day] = [student]
     return inp_dict
