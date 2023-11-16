@@ -13,7 +13,15 @@ class Node:
         """Construct Node."""
         self.data = data
         self. next = next
-        
+    
+    def pretty_list(self) -> str:
+        if self.next == None:
+            # base case, where recursion ends
+            return str(self.data)
+        else:
+            # recursive step
+            return str(self.data) + " -> " + self.next.pretty_list()
+
     def __str__(self) -> str:
         """Produce a string visualization of the linked list."""
         if self.next is None:
