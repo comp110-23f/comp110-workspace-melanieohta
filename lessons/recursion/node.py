@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+__author__ = "730671130"
+
 
 class Node:
     """My Node class for linked lists."""
@@ -12,15 +14,16 @@ class Node:
     def __init__(self, data: int, next: Node | None):
         """Construct Node."""
         self.data = data
-        self. next = next
+        self.next = next
     
-    def pretty_list(self) -> str:
-        if self.next == None:
+    """def pretty_list(self) -> str:
+        Returns a string representation of a linked list.
+        if self.next is None:
             # base case, where recursion ends
             return str(self.data)
         else:
             # recursive step
-            return str(self.data) + " -> " + self.next.pretty_list()
+            return str(self.data) + " -> " + self.next.pretty_list()"""
 
     def __str__(self) -> str:
         """Produce a string visualization of the linked list."""
@@ -30,11 +33,19 @@ class Node:
         else:
             return f"{self.data} -> {self.next}"
         
-    def head(self):
-        return None
+    def head(self) -> int:
+        """Returns the data of the first element in the linked list."""
+        return self.data
     
-    def tail(self):
-        return None
+    def tail(self) -> Node | None:
+        """Returns a linked list of every element except for the head."""
+        if self.next is None:
+            return None
+        return self.next
     
-    def last(self):
-        return None
+    def last(self) -> int:
+        """Returns the data of the last element in the linked list."""
+        if self.next is None:
+            return self.data
+        else:
+            return self.next.last()
