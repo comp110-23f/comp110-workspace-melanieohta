@@ -91,11 +91,12 @@ class Simpy:
     
     def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
         """Allows subscription notation with the subscription operator used on Simpy objects."""
-        if type(rhs).__name__ == "int":
+        if isinstance(rhs, int):
             subscript: float = self.values[rhs]
         else:
             subscript: list[bool] = []
             for i in range(0, len(rhs)):
                 if rhs[i] is True:
                     subscript.append(self.values[i])
-        return Simpy(subscript)
+            return Simpy(subscript)
+        return subscript
